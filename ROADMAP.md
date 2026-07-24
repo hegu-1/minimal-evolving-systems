@@ -22,14 +22,20 @@ Work items:
 3. Prove a Transformer is representable (`mappings/transformer.md`).
 4. Prove a cognitive update model — predictive coding, Bayesian update, or
    reinforcement learning — is representable (`mappings/cognition.md`, `mappings/rl.md`).
-5. Prove **at least one non-trivial theorem**: e.g., under conditions on P
-   and K, stable propagation structures (Objects) necessarily form; or a
-   scale cascade necessarily occurs; or an invariant necessarily exists
-   (which would derive I — OP-11).
+5. Prove **at least one non-trivial theorem**. Status: P-1 (bounded
+   absorption, `proofs/p001_bounded_absorption.md`) delivers the first proved
+   proposition — but it is a classical calibration result, not the novelty
+   payload. The live theorem target is **OP-14**: minimal conditions under
+   which the absorbing region sustains persistent complex structure rather
+   than collapsing to equilibrium.
 
-Gate on items 2–4: conjecture C-001 must first be strengthened to a
-falsifiable statement (see its attack log in `proofs/conjectures.md`);
-otherwise representation proofs are vacuous.
+Gates:
+- Items 2–4: conjecture C-001 must first be strengthened to a falsifiable
+  statement (see its attack log), and OP-15 (which B?) settled; otherwise
+  representation proofs are vacuous.
+- Any external claim: OP-16 (novelty gate) — read the classical dissipative
+  dynamical systems literature (`references/bibliography.md`) and state the
+  delta explicitly.
 
 **Exit criterion:** at least one external mathematician reads `book/` and
 produces a substantive objection. An objection is success; silence is failure.

@@ -19,6 +19,12 @@ PROVED conjecture moves to `book/06_theorems.md` with its proof filed in
     unfalsifiable — the fate of "everything is a category". Outcome: the
     statement must be strengthened before any mapping proof (ROADMAP items
     2–4) can count as evidence.
+  - 2026-07-24 — Claude (Writer) — *Structure revision.* The target quadruple
+    changed to 𝓜 = (X, Φ, K, B) (fourth intake; I deleted by counterexample,
+    OP-7). The statement must be re-issued for 𝓜; the triviality conditions
+    above still apply. Additional bite: OP-15 (non-canonicity of B) means
+    "representable" must either specify a canonical B or quantify over B —
+    until then the conjecture cannot even be restated.
 
 ## Template
 

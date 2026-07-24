@@ -14,17 +14,20 @@ mathematical structure that any description of an evolving system must already
 contain. Every concept must survive the four tests in `AI_PROTOCOL.md` or it
 does not enter the theory.
 
-## Current state (2026-07-24, third intake)
+## Current state (2026-07-24, fourth intake)
 
-Candidate axiom system: **NEPM-0** — four axioms (Distinguishability,
-Propagation, Constrainedness, Self-modification) plus two derived definitions
-(Object := stable propagation pattern; Observation := coupling). Candidate
-primitive set: **(Δ, P, K, I)** — Difference, Propagation, Kernel, Invariant.
-The central conjecture C-001 — every persistently evolving system is
-representable in this quadruple — is *not yet falsifiable as stated*; see its
-attack log. Focus: formalization and one non-trivial theorem, not new
-concepts. The earlier candidate (X, Φ, A) is superseded; the path is
-preserved in git history and `notebook/`.
+Candidate structure: **𝓜 = (X, Φ, K, B)** — Difference Space, Propagation
+(flow / semigroup), Admissibility Kernel, Balance Functional. The former
+Invariant component was deleted by counterexample (dissipative systems have
+none) and replaced by B with the balance decomposition
+dB/dt = injection + redistribution − dissipation. First proved result:
+**P-1** (bounded absorption under dominant dissipation, `proofs/`). The
+Navier–Stokes balance layer maps exactly (`mappings/navier_stokes.md`).
+
+Live front: **OP-14** — when does the absorbing region *not* collapse to a
+single equilibrium but sustain persistent complex structure? — and **OP-9** —
+self-modification (A4) is still outside 𝓜, whose semigroup assumption
+expresses persistence, not evolution. Novelty scoping is gated by OP-16.
 
 See `book/03_axioms.md` and `book/08_open_problems.md`.
 

@@ -1,70 +1,52 @@
 # 03 · Axioms
 
-STATUS: CANDIDATE axiom system, working name **NEPM-0** (third intake,
-2026-07-24; name introduced by the maintainer). No entry has final AXIOM
-status — under `AI_PROTOCOL.md` that requires a recorded, failed deletion
-attempt. This set supersedes the earlier candidate (X, Φ, A); the path is
-preserved in git history and `notebook/2026-07-24.md`.
+STATUS: CANDIDATE structure, working name **NEPM-0** (fourth intake,
+2026-07-24). No entry has final AXIOM status (`AI_PROTOCOL.md`). Supersession
+chain: (X, Φ, A) → (S, O, T, C, I) → (Δ, P, K, I) → current; the path is
+preserved in git history and `notebook/`.
 
-**Discipline:** write as if in 1850 — after Newton, before Einstein, no modern
-theory available, only axioms. An axiom that derives nothing is deleted.
+## Current candidate structure
 
-## A1 — Distinguishability
+> **𝓜 = (X, Φ, K, B)**
 
-There exist at least two distinguishable states: a ≠ b.
+| Component | Name | Formal shape |
+|---|---|---|
+| X | Difference Space | the space of evolvable difference configurations, δ(t) ∈ X; typically infinite-dimensional (function spaces, probability-distribution spaces, graph state spaces). ⚠ Symbol recycled: X previously denoted the *rejected* Configuration Space — this is a different object. |
+| Φ | Propagation | a flow: dδ/dt = F(δ, t) generating Φ_t : X → X with Φ_0 = Id; when the law is time-independent, the semigroup property Φ_{t+s} = Φ_t ∘ Φ_s. |
+| K | Admissibility Kernel | K ⊆ 𝓕(X), the set of admissible evolution operators; the realized F must satisfy F ∈ K. May encode boundary conditions, conservation constraints, causality, locality, symmetry, maximal propagation speed, forbidden regions, and the allowed range of rule modification. F ∉ K ⟹ the evolution is rejected. A restriction on evolution *possibilities*, not a description of current state. |
+| B | Balance Functional | B : X → ℝ≥0, the size of the current difference configuration (energy, variance, information, error, free energy, …), with the balance decomposition dB/dt = J_in + J_amp − J_diss. |
 
-Not "there exists a State": **Difference is prior to State.** Without
-difference there is no information, no change, and no time.
+**Replacement of I.** The former component I (Invariant) was deleted by
+counterexample: dissipative and driven systems — viscous fluids, cognition —
+possess no strictly conserved invariant. B generalizes it: not *what is
+conserved* but *how a quantity is produced, transferred, and dissipated*.
+(Resolves OP-7; obsoletes OP-11. First deletion of a primitive by the
+Counterexample Test.)
 
-## A2 — Propagation
+## Requirements (received first-version skeleton)
 
-Difference propagates: there is a propagation operator P acting on
-differences, Δ ↦ P(Δ). This is difference-update, not state-update. Motion
-begins here.
+1. **Distinguishability** — δ ∈ X. Methodological, not ontological: *without
+   distinguishability, no dynamical description can be built.* The stronger
+   claim "Difference is ontologically prior to matter / energy / relation" is
+   explicitly retracted (fourth intake, item 9), as is the earlier
+   "Propagation is the world's first-class citizen" claim.
+2. **Evolution** — Φ_t : X → X.
+3. **Admissibility** — Φ ∈ K.
+4. **Balance** — dB/dt = Injection + Redistribution − Dissipation.
+5. **Objecthood** — an Object is an invariant, attracting, or metastable
+   structure of Φ (see `04_definitions.md`).
+6. **Complexity candidate condition** — complex behavior tends to arise near
+   Amplification ∼ Dissipation, given nonlinearity, local coupling, multiple
+   scales, sustained input, and finite constraints. (DISCUSSION until made
+   precise; see OP-14.)
 
-⚠ OP-10: the received form Δ(t+1) = P(Δ(t)) indexes by a global discrete t,
-which presupposes time — in tension with A1's own justification. The
-t-notation is therefore not part of the axiom as recorded here.
+## WRITER'S NOTE — the missing fourth axiom (OP-9, sharpened)
 
-## A3 — Constrainedness
-
-Propagation is constrained: there exists K with P ∈ K. Unconstrained
-propagation diverges immediately. K is not a rule set, not memory, not an
-object: **K is the space of admissible propagations.** (Absorbs OP-8.)
-
-## A4 — Self-modification
-
-Propagation can change propagation: P ↦ U(P, Δ) — an operator update, not a
-state update. Learning lives here: gradients update parameters, and
-parameters define the operator.
-
-WRITER'S NOTE (consistency): A4 may not be an axiom about all systems but the
-*definitional boundary of the evolving class* — see OP-12, which would make it
-a candidate resolution of OP-4.
-
-## D1 — Object *(definition, not axiom)*
-
-**Object := a stable propagation pattern.** A vortex is not water; a person is
-not their cells; an LLM is not its weights.
-
-## D2 — Observation *(definition, not axiom)*
-
-**Observation := the coupling that maps a difference into a propagation.**
-Not input — coupling. (Resolves OP-6: Observation is defined, not primitive.)
-
-*Writer's reclassification note: the third intake presented six axioms; items
-5–6 introduce no assumptions and are recorded here as definitions, reducing
-the axiom count to four. Reversible; flagged for maintainer review.*
-
-## Candidate primitive set
-
-> **(Δ, P, K, I)** — Difference, Propagation, Kernel, Invariant
-
-Conjecture C-001 (`proofs/conjectures.md`): every system capable of long-term
-persistence and sustained evolution is representable as such a quadruple —
-currently not falsifiable as stated; see its attack log.
-
-Known gaps in the compression itself:
-- **OP-9** — U appears in A4 but in no component of the quadruple.
-- **OP-11** — theorem target 5 (`ROADMAP.md`) would, if proved, *derive* I,
-  shrinking the candidate to (Δ, P, K).
+NEPM-0's A4 (self-modification, P ↦ U(P, Δ)) appears nowhere in 𝓜. Worse:
+the semigroup property assumed for Φ is *precisely* the statement that the
+law does not change — it excludes self-modification by construction. As
+written, 𝓜 is a classical dissipative dynamical system: it can express
+**persisting**, not yet **evolving** (OP-12). Restoring U turns Φ_t into a
+two-parameter process / cocycle (non-autonomous dynamics), and is a prime
+candidate for where this framework's novelty must live (OP-16). The entry
+"allowed range of rule modification" in K's list is the likely door.
