@@ -1,15 +1,24 @@
 # Mapping: Transformer
 
-STATUS: DISCUSSION — not started.
+STATUS: DISCUSSION — correspondence proposed (third intake, 2026-07-24);
+the representation proof is ROADMAP item 3 and has not begun.
 
-Purpose: serve the Mapping Test (`AI_PROTOCOL.md`) for the candidate
-primitives X, Φ, A.
+## Proposed correspondence (training regime)
 
-## The mapping
+| NEPM-0 | Transformer candidate |
+|---|---|
+| Δ | loss / error signal |
+| P | backpropagation |
+| K | architecture |
+| U | gradient update (parameters define the operator) |
+| I | (unidentified) |
 
-(empty)
+Writer's note: the correspondence conflates regimes. At inference time the
+natural propagation is the forward pass, with Δ as activation differences —
+a *different* quadruple. Whether training and inference are one system with
+two propagations, or two systems, must be settled by the formal definitions;
+OP-9 (where U lives) is upstream of this.
 
 ## What this mapping does NOT establish
 
-A mapping is an interpretation, never evidence. Nothing in this file supports
-promoting any concept to DEFINITION or AXIOM.
+A mapping is an interpretation, never evidence. I is not even identified yet.

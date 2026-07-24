@@ -14,16 +14,19 @@ mathematical structure that any description of an evolving system must already
 contain. Every concept must survive the four tests in `AI_PROTOCOL.md` or it
 does not enter the theory.
 
-## Current state (2026-07-24)
+## Current state (2026-07-24, third intake)
 
-Candidate minimal representation: **(X, Φ, A)** — Configuration Space,
-Evolution Flow, Admissibility Structure. The candidate is under active attack
-and is expected to shrink, not grow:
+Candidate axiom system: **NEPM-0** — four axioms (Distinguishability,
+Propagation, Constrainedness, Self-modification) plus two derived definitions
+(Object := stable propagation pattern; Observation := coupling). Candidate
+primitive set: **(Δ, P, K, I)** — Difference, Propagation, Kernel, Invariant.
+The central conjecture C-001 — every persistently evolving system is
+representable in this quadruple — is *not yet falsifiable as stated*; see its
+attack log. Focus: formalization and one non-trivial theorem, not new
+concepts. The earlier candidate (X, Φ, A) is superseded; the path is
+preserved in git history and `notebook/`.
 
-- **OP-1** — can Configuration Space X itself be derived? (current focus)
-- **OP-2** — can Φ be derived from a Generator G, reducing the triple to (X, G, A) or smaller?
-
-See `book/08_open_problems.md`.
+See `book/03_axioms.md` and `book/08_open_problems.md`.
 
 ## How to read this repository
 

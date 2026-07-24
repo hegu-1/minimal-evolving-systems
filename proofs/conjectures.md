@@ -5,8 +5,20 @@ Rules (`AI_PROTOCOL.md`): every entry is precise and falsifiable; status ∈
 PROVED conjecture moves to `book/06_theorems.md` with its proof filed in
 `proofs/`.
 
-No conjectures yet. The first entries are expected to be formalizations of
-OP-1 and OP-2.
+### C-001 · Universal quadruple representation
+
+- **Statement (as received, third intake 2026-07-24):** every system capable
+  of long-term persistence and sustained evolution can be represented as a
+  quadruple (Δ, P, K, I).
+- **Status:** OPEN — not yet falsifiable as stated
+- **Attack log:**
+  - 2026-07-24 — Claude (Writer) — *Triviality attack.* Without (i) a
+    structure-preservation requirement on "represented as" and (ii)
+    non-degeneracy conditions (K a proper restriction, I non-constant, P
+    non-identity), universal frameworks represent everything and the claim is
+    unfalsifiable — the fate of "everything is a category". Outcome: the
+    statement must be strengthened before any mapping proof (ROADMAP items
+    2–4) can count as evidence.
 
 ## Template
 

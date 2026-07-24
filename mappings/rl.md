@@ -1,9 +1,8 @@
 # Mapping: Reinforcement Learning
 
-STATUS: DISCUSSION — not started.
-
-Purpose: serve the Mapping Test (`AI_PROTOCOL.md`) for the candidate
-primitives X, Φ, A.
+STATUS: DISCUSSION — not started. Designated in ROADMAP item 4 as one of the
+candidate cognitive update models for the representation proof (alongside
+predictive coding and Bayesian update); see `mappings/cognition.md`.
 
 ## The mapping
 
@@ -12,4 +11,4 @@ primitives X, Φ, A.
 ## What this mapping does NOT establish
 
 A mapping is an interpretation, never evidence. Nothing in this file supports
-promoting any concept to DEFINITION or AXIOM.
+promoting any concept.
