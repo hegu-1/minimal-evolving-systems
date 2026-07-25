@@ -1,0 +1,8 @@
+% Font fallback for Unicode math written as plain text (𝓜, Φ, ∈, →, …).
+% XeTeX has no automatic fallback; ucharclasses switches to STIX Two Math
+% exactly on the mathematical Unicode blocks. Group-free transitions (the
+% \begingroup form breaks across table-cell boundaries); cosmetic cost:
+% bold/italic context is reset to \normalfont right after a math run.
+\usepackage[Arrows,SupplementalArrowsA,SupplementalArrowsB,MathematicalOperators,SupplementalMathematicalOperators,MathematicalAlphanumericSymbols,MiscellaneousMathematicalSymbolsA,MiscellaneousMathematicalSymbolsB,LetterlikeSymbols,MiscellaneousTechnical,MiscellaneousSymbols]{ucharclasses}
+\newfontfamily\stixmathfallback{STIX Two Math}
+\setDefaultTransitions{\stixmathfallback}{\normalfont}

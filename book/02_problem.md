@@ -26,9 +26,9 @@ the *explanans*.
 *Status update (fourth intake, 2026-07-24): this warning is now live. The
 fourth-intake candidate (X, Φ, K, B) is precisely a space plus a flow (plus
 constraints and bookkeeping). Unless "evolving" is defined independently —
-the candidate route is OP-12: evolving :⟺ the propagation law is
-non-trivially self-modifying — C-001 risks being true by construction for the
-*persisting* class while remaining silent about the *evolving* one (see
+the candidate route is OP-12: evolving iff the propagation law is
+non-trivially self-modifying — C-001 risks being true by construction for
+the persisting class while remaining silent about the evolving one (see
 OP-9).*
 
 *Second update (v2, 2026-07-25): the route was taken — D3 now defines
