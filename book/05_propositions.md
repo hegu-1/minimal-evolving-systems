@@ -37,3 +37,16 @@ ambient-space half of OP-18 (the K-invariance half remains). Its remark R2
 formalizes the suspension objection: the product presentation is canonical
 and autonomous; the evolving presentation is trajectory-relative (OP-17).
 Classical technique; no novelty claimed (OP-16).
+
+## P-3 · The absorbing region always contains an equilibrium (finite dim.)
+
+A compact convex positively invariant set of a locally Lipschitz flow in ℝⁿ
+contains a rest point (Brouwer-limit argument); under P-1's hypotheses every
+ball {B ≤ c}, c > γ/(2(α−β)), is such a set. Hence in finite dimension the
+absorbing region can never be equilibrium-free.
+
+Full statement and proof: `proofs/p003_equilibrium_in_absorbing_region.md`.
+**Consequence: OP-14 is reframed** — the gate to persistent complexity is
+equilibrium *instability* coexisting with an attracting non-trivial set, not
+equilibrium absence. Infinite-dimensional extension (Schauder, compact
+semiflows) recorded as open. Classical; no novelty claimed (OP-16).
