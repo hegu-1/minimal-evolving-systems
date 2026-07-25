@@ -22,3 +22,18 @@ equilibrium?
 Placement under v2: P-1 is a **static-class** result (U ≡ 0, B-method). Its
 evolving-class analogue — balance bounds that survive a moving law — is open
 and waits on OP-18 (well-posedness of the coupled layers).
+
+## P-2 · Local well-posedness of the coupled layers
+
+If the law space 𝓖 embeds continuously into the Lipschitz vector fields on X
+(evaluation bounds E1–E2) and the law update U is locally Lipschitz, then the
+two-layer system dδ/dt = F(δ), dF/dt = U(F, δ) has a unique local C¹
+solution for every initial pair (δ₀, F₀); along the realized law trajectory
+the propagation Φ_{t,s} is globally defined on the existence interval and
+satisfies the process property.
+
+Full statement and proof: `proofs/p002_local_wellposedness.md`. Settles the
+ambient-space half of OP-18 (the K-invariance half remains). Its remark R2
+formalizes the suspension objection: the product presentation is canonical
+and autonomous; the evolving presentation is trajectory-relative (OP-17).
+Classical technique; no novelty claimed (OP-16).

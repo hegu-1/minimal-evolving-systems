@@ -31,11 +31,12 @@ K ⊆ 𝓕(X). A configuration of the full system is a pair
 
 **Φ is derived, not primitive.** Integrating the coupled layers yields the
 solution operator Φ_{t,s} : X → X (evolve from time s to t along the
-time-varying law), satisfying Φ_{s,s} = Id and the process (cocycle)
-property Φ_{t,r} = Φ_{t,s} ∘ Φ_{s,r}. If U ≡ 0, then F_t ≡ F₀ and
-Φ_{t,s} = Φ_{t−s}: the semigroup — v1's Φ — is recovered exactly. This
-completes the direction of OP-2: the generator, not the flow, is
-fundamental.
+*realized* law trajectory — see P-2, remark R2: Φ is trajectory-relative,
+not intrinsic), satisfying Φ_{s,s} = Id and the process (cocycle) property
+Φ_{t,r} = Φ_{t,s} ∘ Φ_{s,r}. If U ≡ 0, then F_t ≡ F₀ and Φ_{t,s} = Φ_{t−s}:
+the semigroup — v1's Φ — is recovered exactly. This completes the direction
+of OP-2: the generator, not the flow, is fundamental. Well-posedness under
+Lipschitz hypotheses: P-2 (`proofs/`).
 
 **B is an instrument, not a component.** For any chosen balance functional
 B : X → ℝ≥0, the balance decomposition
