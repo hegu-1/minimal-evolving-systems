@@ -1,56 +1,103 @@
 # 03 · Axioms
 
-STATUS: CANDIDATE structure, working name **NEPM-0** (fourth intake,
-2026-07-24). No entry has final AXIOM status (`AI_PROTOCOL.md`). Supersession
-chain: (X, Φ, A) → (S, O, T, C, I) → (Δ, P, K, I) → current; the path is
-preserved in git history and `notebook/`.
+STATUS: CANDIDATE structure, working name **NEPM-0** (v2, 2026-07-25;
+maintainer-directed step). No entry has final AXIOM status
+(`AI_PROTOCOL.md`). Supersession chain: (X, Φ, A) → (S, O, T, C, I) →
+(Δ, P, K, I) → (X, Φ, K, B) → **current**; the path is preserved in git
+history and `notebook/`.
 
-## Current candidate structure
+## Candidate structure v2 — the two-layer system
 
-> **𝓜 = (X, Φ, K, B)**
+> **𝓜 = (X, K, U)** — three objects.
 
-| Component | Name | Formal shape |
+Let 𝓕(X) be a space of admissible generators (evolution laws) on X, and
+K ⊆ 𝓕(X). A configuration of the full system is a pair
+
+  (δ, F) ∈ X × K.
+
+**Two coupled layers:**
+
+- *Difference layer:* dδ/dt = F(δ) — the current law propagates the
+  difference configuration.
+- *Law layer:* dF/dt = U(F, δ) — the law itself is updated in response to
+  the difference configuration, with U **K-preserving**: the law never
+  leaves admissibility. K is the hard constraint on self-modification.
+
+| Component | Name | Role |
 |---|---|---|
-| X | Difference Space | the space of evolvable difference configurations, δ(t) ∈ X; typically infinite-dimensional (function spaces, probability-distribution spaces, graph state spaces). ⚠ Symbol recycled: X previously denoted the *rejected* Configuration Space — this is a different object. |
-| Φ | Propagation | a flow: dδ/dt = F(δ, t) generating Φ_t : X → X with Φ_0 = Id; when the law is time-independent, the semigroup property Φ_{t+s} = Φ_t ∘ Φ_s. |
-| K | Admissibility Kernel | K ⊆ 𝓕(X), the set of admissible evolution operators; the realized F must satisfy F ∈ K. May encode boundary conditions, conservation constraints, causality, locality, symmetry, maximal propagation speed, forbidden regions, and the allowed range of rule modification. F ∉ K ⟹ the evolution is rejected. A restriction on evolution *possibilities*, not a description of current state. |
-| B | Balance Functional | B : X → ℝ≥0, the size of the current difference configuration (energy, variance, information, error, free energy, …), with the balance decomposition dB/dt = J_in + J_amp + J_redist − J_diss, where J_redist is **B-neutral by definition** (⟨N_r(δ), δ⟩ = 0 under the pairing defining B): redistribution moves the quantity across scales without changing its total. Distinct from amplification J_amp, which P-1's H2 bounds. |
+| X | Difference Space | space of evolvable difference configurations, δ ∈ X (typically infinite-dimensional) |
+| K | Admissibility Kernel | K ⊆ 𝓕(X): which laws may exist, and within which the law may move |
+| U | Law Update | U : K × X → TK, the self-modification field; U ≡ 0 is allowed |
 
-**Replacement of I.** The former component I (Invariant) was deleted by
-counterexample: dissipative and driven systems — viscous fluids, cognition —
-possess no strictly conserved invariant. B generalizes it: not *what is
-conserved* but *how a quantity is produced, transferred, and dissipated*.
-(Resolves OP-7; obsoletes OP-11. First deletion of a primitive by the
-Counterexample Test.)
+**Φ is derived, not primitive.** Integrating the coupled layers yields the
+solution operator Φ_{t,s} : X → X (evolve from time s to t along the
+time-varying law), satisfying Φ_{s,s} = Id and the process (cocycle)
+property Φ_{t,r} = Φ_{t,s} ∘ Φ_{s,r}. If U ≡ 0, then F_t ≡ F₀ and
+Φ_{t,s} = Φ_{t−s}: the semigroup — v1's Φ — is recovered exactly. This
+completes the direction of OP-2: the generator, not the flow, is
+fundamental.
 
-## Requirements (received first-version skeleton)
+**B is an instrument, not a component.** For any chosen balance functional
+B : X → ℝ≥0, the balance decomposition
+dB/dt = J_in + J_amp + J_redist − J_diss (J_redist B-neutral) and results
+like P-1 apply to the difference layer. Since one system admits many such
+functionals, B belongs to the *method*, not the structure. (Resolves OP-15
+in the instrument direction; removes the non-canonicity of v1.)
 
-1. **Distinguishability** — δ ∈ X. Methodological, not ontological: *without
-   distinguishability, no dynamical description can be built.* The stronger
-   claim "Difference is ontologically prior to matter / energy / relation" is
-   explicitly retracted (fourth intake, item 9), as is the earlier
-   "Propagation is the world's first-class citizen" claim.
-2. **Evolution** — Φ_t : X → X.
-3. **Admissibility** — Φ ∈ K.
-4. **Balance** — dB/dt = Injection + Amplification + Redistribution −
-   Dissipation, with Redistribution B-neutral by definition. Navier–Stokes is
-   the pure-redistribution instance (J_amp = 0); P-1 bounds systems by their
-   J_amp. *(Writer's split, 2026-07-25: a cold-read audit found the middle
-   term conflated across files — see `notebook/2026-07-25.md`.)*
+## D3 — Static and evolving *(definition, not axiom)*
+
+Given a declared split (X, K) of a system's description into difference and
+law:
+
+- the system is **static** if U ≡ 0 along its trajectory — the law never
+  changes; classical (autonomous, dissipative) dynamics; where P-1 lives;
+- the system is **evolving** if U is non-trivial — the law itself moves,
+  within K.
+
+This is the candidate resolution of OP-4 via OP-12: *evolving* is defined by
+self-modification of the law, not by any property of the difference layer.
+
+⚠ **The suspension objection (OP-17).** Any evolving system can be
+repackaged as a static one on the enlarged space X × K with state (δ, F) and
+constant law F′(δ, F) = (F(δ), U(F, δ)). D3 is therefore
+*presentation-relative*: it classifies a system **given** a declared
+state/law split. Whether a canonical split exists — note the intrinsic
+typing asymmetry: the second factor consists of maps acting on the first —
+is OP-17, currently the deepest open problem of the definition layer. The
+working stance is the methodological one (consistent with the fourth
+intake's retreat): declare the split, then classify.
+
+**Scope note.** Second-order self-modification — K itself changing
+("institutions", "revolutions" from the second-intake meta-tower) — is
+deliberately excluded at this stage: first-order U suffices for the learning
+class. Revisit only if a concrete theorem demands it.
+
+## Requirements (v2)
+
+1. **Distinguishability** — δ ∈ X. Methodological: without
+   distinguishability, no dynamical description can be built.
+2. **Admissibility** — F ∈ K at all times; U is K-preserving.
+3. **Self-modification** — the law layer dF/dt = U(F, δ) is part of the
+   structure; U ≡ 0 is the static specialization.
+4. **Balance (method)** — B-analysis applies to the difference layer;
+   see `proofs/p001_bounded_absorption.md`.
 5. **Objecthood** — an Object is an invariant, attracting, or metastable
-   structure of Φ (see `04_definitions.md`).
-6. **Complexity candidate condition** — complex behavior tends to arise near
-   Amplification ∼ Dissipation, given nonlinearity, local coupling, multiple
-   scales, sustained input, and finite constraints. (DISCUSSION until made
-   precise; see OP-14.)
+   structure of the derived Φ (see `04_definitions.md`).
+6. **Complexity candidate condition** — complex behavior tends to arise
+   near Amplification ∼ Dissipation (see OP-14; DISCUSSION until precise).
 
-## WRITER'S NOTE — the missing fourth axiom (OP-9, sharpened)
+## v1 as specialization
 
-NEPM-0's A4 (self-modification, P ↦ U(P, Δ)) appears nowhere in 𝓜. Worse:
-the semigroup property assumed for Φ is *precisely* the statement that the
-law does not change — it excludes self-modification by construction. As
-written, 𝓜 is a classical dissipative dynamical system: it can express
-**persisting**, not yet **evolving** (OP-12). Restoring U turns Φ_t into a
-two-parameter process / cocycle (non-autonomous dynamics), and is a prime
-candidate for where this framework's novelty must live (OP-16). The entry
-"allowed range of rule modification" in K's list is the likely door.
+v1's 𝓜 = (X, Φ, K, B) is not discarded: it is the **static specialization**
+(U ≡ 0, Φ a semigroup) together with one chosen instrument B. Everything
+proved there (P-1) transfers to v2's static class unchanged.
+
+## Open gaps of v2
+
+- **OP-17** — the suspension objection: can the state/law split be made
+  canonical?
+- **OP-18** — well-posedness of the coupled layers: conditions on K and U
+  for existence / uniqueness of (δ_t, F_t). Prerequisite to any theorem
+  about the evolving class.
+- **OP-10** — time remains an explicit primitive parameter (unchanged by
+  v2).

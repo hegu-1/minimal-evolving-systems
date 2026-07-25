@@ -15,11 +15,12 @@ structure updated to 𝓜 after the fourth.)
 
 Work items:
 
-1. Rigorously define **𝓜 = (X, Φ, K, B)** with no domain vocabulary — no
-   "cognition", "AI", "fluid". Upstream blockers: OP-9 (where U lives),
-   OP-10 (time), OP-15 (which B), plus OP-3/OP-4 (minimality order,
-   non-circular "evolving"; OP-12 is a candidate route). K's final name:
-   OP-13 (maintainer call, non-blocking).
+1. Rigorously define **𝓜 = (X, K, U)** (v2, two-layer structure) with no
+   domain vocabulary — no "cognition", "AI", "fluid". Upstream blockers:
+   OP-17 (canonical state/law split), OP-18 (well-posedness of the coupled
+   layers), OP-10 (time), plus OP-3 (minimality order / ambient class 𝒞,
+   which C-001 v2 quantifies over). K's final name: OP-13 (maintainer call,
+   non-blocking).
 2. Prove Navier–Stokes is representable as the quadruple (`mappings/navier_stokes.md`).
 3. Prove a Transformer is representable (`mappings/transformer.md`).
 4. Prove a cognitive update model — predictive coding, Bayesian update, or

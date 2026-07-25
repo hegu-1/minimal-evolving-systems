@@ -14,22 +14,22 @@ mathematical structure that any description of an evolving system must already
 contain. Every concept must survive the four tests in `AI_PROTOCOL.md` or it
 does not enter the theory.
 
-## Current state (2026-07-24, fourth intake)
+## Current state (2026-07-25, v2)
 
-Candidate structure: **𝓜 = (X, Φ, K, B)** — Difference Space, Propagation
-(flow / semigroup), Admissibility Kernel, Balance Functional. The former
-Invariant component was deleted by counterexample (dissipative systems have
-none) and replaced by B with the balance decomposition
-dB/dt = injection + amplification + redistribution − dissipation
-(redistribution B-neutral: it moves the quantity across scales without
-changing its total). First proved result:
-**P-1** (bounded absorption under dominant dissipation, `proofs/`). The
-Navier–Stokes balance layer maps exactly (`mappings/navier_stokes.md`).
+Candidate structure: **𝓜 = (X, K, U)** — Difference Space, Admissibility
+Kernel, Law Update — a **two-layer system**: the current law F ∈ K
+propagates the difference (dδ/dt = F(δ)) while the law itself is updated
+within K (dF/dt = U(F, δ)). Propagation Φ is now *derived* (a process;
+semigroup iff U ≡ 0), and the Balance Functional B is an *instrument* of the
+method, not a component. **D3** defines the split: static (U ≡ 0 — where the
+proved P-1 lives) vs evolving (U non-trivial) — presentation-relative, see
+the suspension objection (OP-17). C-001 restated in falsifiable-leaning form
+(v2, `proofs/conjectures.md`).
 
-Live front: **OP-14** — when does the absorbing region *not* collapse to a
-single equilibrium but sustain persistent complex structure? — and **OP-9** —
-self-modification (A4) is still outside 𝓜, whose semigroup assumption
-expresses persistence, not evolution. Novelty scoping is gated by OP-16.
+Live front: **OP-17** (can the state/law split be made canonical?),
+**OP-18** (well-posedness of the coupled layers), **OP-14** (when does the
+absorbing region sustain complexity instead of collapsing to equilibrium?).
+Novelty scoping remains gated by OP-16.
 
 See `book/03_axioms.md` and `book/08_open_problems.md`.
 

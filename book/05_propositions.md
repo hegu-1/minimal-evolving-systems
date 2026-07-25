@@ -18,3 +18,7 @@ First mathematical statement of the project. Attribution: classical result,
 recorded for calibration — no novelty claimed (OP-16). The live question it
 opens is OP-14: when does the absorbing region *not* collapse to a single
 equilibrium?
+
+Placement under v2: P-1 is a **static-class** result (U ≡ 0, B-method). Its
+evolving-class analogue — balance bounds that survive a moving law — is open
+and waits on OP-18 (well-posedness of the coupled layers).

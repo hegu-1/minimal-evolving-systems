@@ -24,12 +24,17 @@ the result is empty. The definition of the *explanandum* must be independent of
 the *explanans*.
 
 *Status update (fourth intake, 2026-07-24): this warning is now live. The
-current candidate 𝓜 = (X, Φ, K, B) is precisely a space plus a flow (plus
+fourth-intake candidate (X, Φ, K, B) is precisely a space plus a flow (plus
 constraints and bookkeeping). Unless "evolving" is defined independently —
 the candidate route is OP-12: evolving :⟺ the propagation law is
 non-trivially self-modifying — C-001 risks being true by construction for the
 *persisting* class while remaining silent about the *evolving* one (see
 OP-9).*
+
+*Second update (v2, 2026-07-25): the route was taken — D3 now defines
+static / evolving via the law-update U in the two-layer structure
+𝓜 = (X, K, U). The residual obstruction is the suspension objection: the
+definition is relative to a declared state/law split (OP-17).*
 
 **P2 — The minimality order.** "Minimal" is only meaningful relative to
 (a) an ambient class of admissible formalizations, and

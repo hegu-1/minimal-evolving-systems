@@ -80,7 +80,7 @@ changing a symbol or name not yet in the supersession chain is a *rename*
 (gated on the maintainer).
 
 *(Both clauses added 2026-07-25 by the Writer after a cold-read audit;
-pending maintainer ratification — see `notebook/2026-07-25.md`.)*
+ratified by maintainer directive the same day — see `notebook/2026-07-25.md`.)*
 
 ## Style
 
