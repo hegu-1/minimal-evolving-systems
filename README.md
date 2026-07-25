@@ -20,7 +20,9 @@ Candidate structure: **𝓜 = (X, Φ, K, B)** — Difference Space, Propagation
 (flow / semigroup), Admissibility Kernel, Balance Functional. The former
 Invariant component was deleted by counterexample (dissipative systems have
 none) and replaced by B with the balance decomposition
-dB/dt = injection + redistribution − dissipation. First proved result:
+dB/dt = injection + amplification + redistribution − dissipation
+(redistribution B-neutral: it moves the quantity across scales without
+changing its total). First proved result:
 **P-1** (bounded absorption under dominant dissipation, `proofs/`). The
 Navier–Stokes balance layer maps exactly (`mappings/navier_stokes.md`).
 

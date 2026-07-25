@@ -20,7 +20,10 @@ Writer's note: the correspondence conflates regimes. At inference time the
 natural propagation is the forward pass, with Δ as activation differences —
 a *different* quadruple. Whether training and inference are one system with
 two propagations, or two systems, must be settled by the formal definitions;
-OP-9 (where U lives) is upstream of this.
+OP-9 (where U lives) is upstream of this. A second overlap is deliberate but
+not yet precise: backpropagation (Φ) *computes* gradients — error
+propagation — while U *applies* them, updating the law; the formal
+definitions must separate these cleanly.
 
 ## What this mapping does NOT establish
 

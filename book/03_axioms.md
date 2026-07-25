@@ -14,7 +14,7 @@ preserved in git history and `notebook/`.
 | X | Difference Space | the space of evolvable difference configurations, δ(t) ∈ X; typically infinite-dimensional (function spaces, probability-distribution spaces, graph state spaces). ⚠ Symbol recycled: X previously denoted the *rejected* Configuration Space — this is a different object. |
 | Φ | Propagation | a flow: dδ/dt = F(δ, t) generating Φ_t : X → X with Φ_0 = Id; when the law is time-independent, the semigroup property Φ_{t+s} = Φ_t ∘ Φ_s. |
 | K | Admissibility Kernel | K ⊆ 𝓕(X), the set of admissible evolution operators; the realized F must satisfy F ∈ K. May encode boundary conditions, conservation constraints, causality, locality, symmetry, maximal propagation speed, forbidden regions, and the allowed range of rule modification. F ∉ K ⟹ the evolution is rejected. A restriction on evolution *possibilities*, not a description of current state. |
-| B | Balance Functional | B : X → ℝ≥0, the size of the current difference configuration (energy, variance, information, error, free energy, …), with the balance decomposition dB/dt = J_in + J_amp − J_diss. |
+| B | Balance Functional | B : X → ℝ≥0, the size of the current difference configuration (energy, variance, information, error, free energy, …), with the balance decomposition dB/dt = J_in + J_amp + J_redist − J_diss, where J_redist is **B-neutral by definition** (⟨N_r(δ), δ⟩ = 0 under the pairing defining B): redistribution moves the quantity across scales without changing its total. Distinct from amplification J_amp, which P-1's H2 bounds. |
 
 **Replacement of I.** The former component I (Invariant) was deleted by
 counterexample: dissipative and driven systems — viscous fluids, cognition —
@@ -32,7 +32,11 @@ Counterexample Test.)
    "Propagation is the world's first-class citizen" claim.
 2. **Evolution** — Φ_t : X → X.
 3. **Admissibility** — Φ ∈ K.
-4. **Balance** — dB/dt = Injection + Redistribution − Dissipation.
+4. **Balance** — dB/dt = Injection + Amplification + Redistribution −
+   Dissipation, with Redistribution B-neutral by definition. Navier–Stokes is
+   the pure-redistribution instance (J_amp = 0); P-1 bounds systems by their
+   J_amp. *(Writer's split, 2026-07-25: a cold-read audit found the middle
+   term conflated across files — see `notebook/2026-07-25.md`.)*
 5. **Objecthood** — an Object is an invariant, attracting, or metastable
    structure of Φ (see `04_definitions.md`).
 6. **Complexity candidate condition** — complex behavior tends to arise near

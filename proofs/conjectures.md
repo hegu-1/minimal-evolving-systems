@@ -1,16 +1,16 @@
 # Conjecture Ledger
 
 Rules (`AI_PROTOCOL.md`): every entry is precise and falsifiable; status ∈
-{OPEN, UNDER ATTACK, REFUTED, PROVED}; attack logs are **append-only**. A
-PROVED conjecture moves to `book/06_theorems.md` with its proof filed in
-`proofs/`.
+{OPEN, UNDER ATTACK, REFUTED, PROVED}, where UNDER ATTACK ⟺ the attack log
+is non-empty and undecided; attack logs are **append-only**. A PROVED
+conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
 
 ### C-001 · Universal quadruple representation
 
 - **Statement (as received, third intake 2026-07-24):** every system capable
   of long-term persistence and sustained evolution can be represented as a
   quadruple (Δ, P, K, I).
-- **Status:** OPEN — not yet falsifiable as stated
+- **Status:** UNDER ATTACK — not yet falsifiable as stated
 - **Attack log:**
   - 2026-07-24 — Claude (Writer) — *Triviality attack.* Without (i) a
     structure-preservation requirement on "represented as" and (ii)

@@ -71,3 +71,9 @@ limsup B(t) ≤ γ/λ = γ / (2(α−β)). ∎
   dissipative (α > β, this proposition), critical (α ≈ β), amplifying
   (α < β — no conclusion; a *necessary direction* for instability, not a
   proof of it, as the intake itself notes).
+- **R5 (amplification vs redistribution — added 2026-07-25).** H2 bounds only
+  the *amplifying* part of the nonlinearity. Any B-neutral redistribution
+  component N_r with ⟨N_r(δ), δ⟩ = 0 contributes nothing to dB/dt and is
+  invisible to B — hence Navier–Stokes, whose convective term is purely
+  redistributive, sits at β = 0 for the energy functional. See the balance
+  decomposition split in `book/03_axioms.md`.

@@ -10,14 +10,16 @@ falsifiability** — a document any mathematician can read and criticize.
 ## Phase 0.1 — from framework to mathematics (current)
 
 **Concept invention is over for now. The work is formalization.**
-(Reframed 2026-07-24, third intake, per the maintainer's five-point program.)
+(Reframed 2026-07-24 per the maintainer's five-point program, third intake;
+structure updated to 𝓜 after the fourth.)
 
 Work items:
 
-1. Rigorously define **(Δ, P, K, I)** with no domain vocabulary — no
+1. Rigorously define **𝓜 = (X, Φ, K, B)** with no domain vocabulary — no
    "cognition", "AI", "fluid". Upstream blockers: OP-9 (where U lives),
-   OP-10 (time), OP-13 (naming of K), plus OP-3/OP-4 (minimality order,
-   non-circular "evolving"; OP-12 is a candidate route).
+   OP-10 (time), OP-15 (which B), plus OP-3/OP-4 (minimality order,
+   non-circular "evolving"; OP-12 is a candidate route). K's final name:
+   OP-13 (maintainer call, non-blocking).
 2. Prove Navier–Stokes is representable as the quadruple (`mappings/navier_stokes.md`).
 3. Prove a Transformer is representable (`mappings/transformer.md`).
 4. Prove a cognitive update model — predictive coding, Bayesian update, or

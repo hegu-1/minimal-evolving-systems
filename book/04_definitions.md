@@ -33,5 +33,6 @@ identifiable while propagating*.
 
 - **Invariant (I)** — deleted by counterexample: dissipative / driven systems
   have no strict invariant; replaced by B (OP-7 resolved, fourth intake).
-- **State / Configuration Space** — rejected by A1 (first and third intakes).
+- **State / Configuration Space** — questioned from the first intake (OP-1);
+  rejected by A1 (third intake).
 - Memory, Intelligence, Complexity — still expected to be derived; unplaced.

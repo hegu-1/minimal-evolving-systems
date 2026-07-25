@@ -69,6 +69,19 @@ promoting CONJECTURE → THEOREM; making anything public.
 attack-log entries (append only); importing terminology, claims, or branding
 from the maintainer's other projects — this theory stands alone or not at all.
 
+**Maintainer override.** The maintainer may explicitly override any rule in
+this file, including Forbidden items; the override must be recorded in
+`notebook/` with date and scope (precedent: the working name "NEPM-0",
+2026-07-24). An unrecorded override is void.
+
+**Boundary rule.** Propagating an already-recorded supersession into stale
+files is a *consistency fix* (allowed without asking). Introducing or
+changing a symbol or name not yet in the supersession chain is a *rename*
+(gated on the maintainer).
+
+*(Both clauses added 2026-07-25 by the Writer after a cold-read audit;
+pending maintainer ratification — see `notebook/2026-07-25.md`.)*
+
 ## Style
 
 The shortest correct statement wins. Every chapter opens with its STATUS line.

@@ -7,7 +7,7 @@ pending.
 
 | ID | Problem | Status |
 |---|---|---|
-| OP-1 | Can Configuration Space X be derived? | RESOLVED (third intake): X-as-state is not primitive — Difference is prior (A1). Pending promotion. |
+| OP-1 | Can Configuration Space X be derived? | RESOLVED (third intake): X-as-state is not primitive — Difference is prior (A1). Pending promotion. (Symbol note: "X" here is the former Configuration Space; 𝓜's X is the Difference Space — recycled symbol, see `03`/`04`.) |
 | OP-2 | Can Evolution Flow Φ be derived from a Generator G? | SUPERSEDED: the generator role is filled by F (fourth intake) and the update U (A4). Residual absorbed into OP-9. |
 | OP-3 | State the minimality order: relative to which ambient class of formalizations, ordered how? (P2) | OPEN — blocks any minimality claim; now includes the minimality of the time primitive (see OP-10) |
 | OP-4 | Define "evolving system" non-circularly. (P1) | OPEN — candidate route via OP-12 |

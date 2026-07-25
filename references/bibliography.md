@@ -1,7 +1,9 @@
 # Bibliography
 
-STATUS: to survey (Destroyer role, `AI_PROTOCOL.md`). No entry may be cited in
-`book/` unless the citing agent has actually read it.
+STATUS: to survey (Destroyer role, `AI_PROTOCOL.md`). No entry may be cited
+in `book/` or `proofs/` unless the citing agent has actually read it.
+Attribution pointers ("cf.") to standard references are permitted
+provisionally, but must be verified against the actual texts before v0.1.
 
 Areas to compare against before Version 0.1 claims any novelty:
 
