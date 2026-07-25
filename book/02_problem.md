@@ -19,9 +19,17 @@ footnotes.
 
 **P1 — Non-circularity.** "Capable of sustained evolution" must be defined
 without smuggling in the candidate primitives. If "evolving" is defined in
-terms of a state space and a flow, then (X, Φ) is minimal by construction and
+terms of a space and a flow, then (space, flow) is minimal by construction and
 the result is empty. The definition of the *explanandum* must be independent of
 the *explanans*.
+
+*Status update (fourth intake, 2026-07-24): this warning is now live. The
+current candidate 𝓜 = (X, Φ, K, B) is precisely a space plus a flow (plus
+constraints and bookkeeping). Unless "evolving" is defined independently —
+the candidate route is OP-12: evolving :⟺ the propagation law is
+non-trivially self-modifying — C-001 risks being true by construction for the
+*persisting* class while remaining silent about the *evolving* one (see
+OP-9).*
 
 **P2 — The minimality order.** "Minimal" is only meaningful relative to
 (a) an ambient class of admissible formalizations, and

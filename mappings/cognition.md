@@ -5,12 +5,15 @@ the representation proof is ROADMAP item 4 and has not begun.
 
 ## Proposed correspondence
 
-| NEPM-0 | Cognition candidate |
+*(Updated after the fourth intake: I deleted, B in its place; symbols aligned
+to 𝓜 = (X, Φ, K, B).)*
+
+| 𝓜 | Cognition candidate |
 |---|---|
-| Δ | prediction error |
-| P | belief update |
+| X (δ ∈ X) | prediction error / structural difference between prediction and observation |
+| Φ | belief update |
 | K | long-term dispositional structure (personality) |
-| I | (unidentified) |
+| B | prediction-error magnitude or free energy (candidates; unexamined) |
 
 The intake's stance: cognition is not the starting point of the theory but an
 *instance* of it. Target formal models for the proof: predictive coding,

@@ -5,12 +5,15 @@ STATUS: DISCUSSION — correspondence proposed for *life* (third intake,
 
 ## Proposed correspondence (metabolic level)
 
-| NEPM-0 | Life candidate |
+*(Updated after the fourth intake: I deleted, B in its place; symbols aligned
+to 𝓜 = (X, Φ, K, B).)*
+
+| 𝓜 | Life candidate |
 |---|---|
-| Δ | concentration differences |
-| P | metabolism |
+| X (δ ∈ X) | concentration differences |
+| Φ | metabolism |
 | K | DNA |
-| I | (unidentified) |
+| B | (unidentified — free-energy-type candidates unexamined) |
 
 Open: selection and heredity likely live at the U level — propagation
 modifying propagation across generations — unexamined.

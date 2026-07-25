@@ -5,13 +5,16 @@ the representation proof is ROADMAP item 3 and has not begun.
 
 ## Proposed correspondence (training regime)
 
-| NEPM-0 | Transformer candidate |
+*(Updated after the fourth intake: I deleted, B in its place; symbols aligned
+to 𝓜 = (X, Φ, K, B).)*
+
+| 𝓜 | Transformer candidate |
 |---|---|
-| Δ | loss / error signal |
-| P | backpropagation |
+| X (δ ∈ X) | loss / error signal |
+| Φ | backpropagation |
 | K | architecture |
-| U | gradient update (parameters define the operator) |
-| I | (unidentified) |
+| U | gradient update (parameters define the operator) — U is outside 𝓜, see OP-9 |
+| B | training loss as balance functional (candidate; balance decomposition unexamined) |
 
 Writer's note: the correspondence conflates regimes. At inference time the
 natural propagation is the forward pass, with Δ as activation differences —
