@@ -58,4 +58,4 @@ disagree, the repository wins.
 | `references/` | Literature to compare against before claiming novelty |
 
 ---
-Created by naze.
+Created by naze. Licensed under CC BY 4.0 (`LICENSE`).
