@@ -20,8 +20,8 @@ opens is OP-14: when does the absorbing region *not* collapse to a single
 equilibrium?
 
 Placement under v2: P-1 is a **static-class** result (U ≡ 0, B-method). Its
-evolving-class analogue — balance bounds that survive a moving law — is open
-and waits on OP-18 (well-posedness of the coupled layers).
+evolving-class analogue is P-4's two-layer balance criterion: balance bounds
+must survive both the moving state and the moving law.
 
 ## P-2 · Local well-posedness of the coupled layers
 
@@ -33,10 +33,10 @@ the propagation Φ_{t,s} is globally defined on the existence interval and
 satisfies the process property.
 
 Full statement and proof: `proofs/p002_local_wellposedness.md`. Settles the
-ambient-space half of OP-18 (the K-invariance half remains). Its remark R2
-formalizes the suspension objection: the product presentation is canonical
-and autonomous; the evolving presentation is trajectory-relative (OP-17).
-Classical technique; no novelty claimed (OP-16).
+ambient-space local half of OP-18. Its remark R2 formalizes the suspension
+objection: the product presentation is canonical and autonomous; the evolving
+presentation is trajectory-relative (OP-17). Classical technique; no novelty
+claimed (OP-16).
 
 ## P-3 · The absorbing region always contains an equilibrium (finite dim.)
 
@@ -50,3 +50,16 @@ Full statement and proof: `proofs/p003_equilibrium_in_absorbing_region.md`.
 equilibrium *instability* coexisting with an attracting non-trivial set, not
 equilibrium absence. Infinite-dimensional extension (Schauder, compact
 semiflows) recorded as open. Classical; no novelty claimed (OP-16).
+
+## P-4 · K-invariance and global existence for the coupled layers
+
+If K ⊂ 𝓖 is nonempty, closed, and convex, and the law update satisfies the
+Nagumo tangency condition U(F, δ) ∈ T_K(F) for every F ∈ K, then the local
+solution of P-2 stays in X × K. If, in addition, the state and law layers admit
+coercive balance functionals B_X and B_𝓖 whose derivatives close by a
+two-layer Grönwall estimate, then no finite-time blow-up occurs and the
+coupled system is globally well-posed in X × K.
+
+Full statement and proof: `proofs/p004_k_invariance_global_existence.md`.
+This settles the remaining formal half of OP-18 under explicit Nagumo and
+balance hypotheses. Classical; no novelty claimed (OP-16).

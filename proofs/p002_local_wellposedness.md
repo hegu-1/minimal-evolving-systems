@@ -83,10 +83,10 @@ uniqueness: the process property. Finally δ_t solves this equation with
 
 ## Remarks
 
-- **R1 (K not yet addressed — the remaining half of OP-18).** P-2 solves in
-  the ambient space 𝓖. Keeping F_t ∈ K for a closed K ⊊ 𝓖 requires a
-  tangency condition on U at the boundary of K (Nagumo-type invariance);
-  not proved here.
+- **R1 (K addressed by P-4).** P-2 solves in the ambient space 𝓖. Keeping
+  F_t ∈ K for a closed K ⊊ 𝓖 requires a tangency condition on U at the
+  boundary of K (Nagumo-type invariance); see
+  `proofs/p004_k_invariance_global_existence.md`.
 - **R2 (the suspension objection acquires formal teeth — feeds OP-17).**
   Step 1–2 construct an autonomous local semiflow on the *product* X × 𝓖.
   The evolving-presentation operators Φ_{t,s} of part (b) exist only
@@ -95,9 +95,10 @@ uniqueness: the process property. Finally δ_t solves this equation with
   trajectory. The static presentation (product) is canonical; the evolving
   presentation is trajectory-relative. Any canonical-split proposal (OP-17)
   must live with this asymmetry.
-- **R3 (global existence — open).** Beyond [0, T] one needs a priori bounds
-  on both layers; the natural route is a two-layer balance estimate
-  (P-1-style on the δ-layer plus a growth bound on ‖F_t‖_𝓖). Future work.
+- **R3 (global existence by two-layer balance).** Beyond [0, T] one needs a
+  priori bounds on both layers; P-4 records a continuation criterion and a
+  sufficient two-layer balance estimate (P-1-style on the δ-layer plus a
+  growth bound on ‖F_t‖_𝓖).
 - **R4 (non-vacuity).** The space of bounded Lipschitz vector fields with
   norm ‖F‖ = ‖F(0)‖ + Lip(F) satisfies (E1)–(E2); the hypotheses describe a
   real class.
