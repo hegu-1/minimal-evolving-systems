@@ -80,7 +80,6 @@ The hypotheses bound G on the norm ball of radius R + 1. Indeed, (E2) gives
 ‖F(δ)‖_X ≤ C(R + 1)(1 + R + 1) there, and local Lipschitzness of U gives
 ‖U(F, δ)‖_𝓖 ≤ ‖U(0, 0)‖_𝓖 + L_{R+1}(‖F‖_𝓖 + ‖δ‖_X). Write the resulting
 bound for ‖G‖ as M. For s < t < T_max,
-For s < t < T_max,
 
   ‖(δ(t), F(t)) − (δ(s), F(s))‖
     ≤ ∫_s^t ‖G(δ(r), F(r))‖ dr
