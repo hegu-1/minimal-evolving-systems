@@ -49,6 +49,22 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
   - 2026-07-25 — Claude (Writer) — *Residual-dependence note (above), carried
     into the restatement itself.* Until 𝒞 is defined, "every system in 𝒞"
     quantifies over nothing checkable.
+  - 2026-07-28 — Claude (Writer) — *Predictive-minimality attack (motivated
+    by `mappings/cognition.md`).* Clause (ii) excludes U ≡ 0 but not *idle*
+    U: inflate the state space (X′ = history space × a dummy factor), let U
+    act non-trivially only on the dummy factor, and embed the process as its
+    own accumulating history. The result is structure-preserving, has K ⊊
+    𝓕(X′), U ≢ 0, and a non-constant embedding — yet compresses nothing and
+    carries no information about the system's law. C-001 v2 is then
+    satisfiable for every system in any reasonable 𝒞: unfalsifiable again
+    (same family as the 07-24 triviality attack). Candidate repair: add
+    (iii) *predictive minimality* — the representation admits no proper
+    reduction (quotient or closed subspace) that remains structure-preserving
+    and predictively sufficient; cf. Kalman minimal realization and
+    causal-state minimality. With (iii), divergent-statistical-complexity
+    processes become a live falsification family (they admit no bounded
+    minimal state). Outcome: the statement needs clause (iii) before the
+    ROADMAP mapping proofs can count as evidence.
 
 ## Template
 
