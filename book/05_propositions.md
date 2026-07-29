@@ -63,3 +63,27 @@ coupled system is globally well-posed in X × K.
 Full statement and proof: `proofs/p004_k_invariance_global_existence.md`.
 This settles the remaining formal half of OP-18 under explicit Nagumo and
 balance hypotheses. Classical; no novelty claimed (OP-16).
+
+## P-5 · The complexity gate requires non-gradient structure
+
+On a compact positively invariant region C ⊂ ℝⁿ, if the flow admits a strict
+Lyapunov function (a C¹ function decreasing off the equilibria), then every
+ω-limit set lies in the equilibrium set (LaSalle) and no non-trivial attracting
+set exists — the reframed OP-14 gate is closed. Contrapositive: **an open gate
+requires that no strict Lyapunov function exist on C, i.e. F is non-gradient.**
+
+Full statement and proof: `proofs/p005_gate_requires_nongradient.md`. Sharpens
+OP-14 with P-3: the gate lives only in the non-gradient regime, in every finite
+dimension. Classical (LaSalle); no novelty claimed (OP-16).
+
+## P-6 · In two dimensions, all-repelling equilibria open the gate
+
+For n = 2, if a P-1 absorbing disk contains finitely many equilibria all of
+which are sources (Jacobian spectrum in the open right half-plane), then the
+disk contains a periodic orbit (Lyapunov-equation collars + Poincaré–Bendixson),
+so the reframed OP-14 gate is open.
+
+Full statement and proof: `proofs/p006_two_dimensional_gate.md`. Promotes
+OP-14's own witness (unstable focus + trapping region) to a proposition and
+**isolates n ≥ 3 as the open core** (Poincaré–Bendixson fails; Lorenz-type
+strange attractors become possible). Classical; no novelty claimed (OP-16).
