@@ -27,9 +27,10 @@ the suspension objection (OP-17). C-001 restated in falsifiable-leaning form
 (v2, `proofs/conjectures.md`).
 
 Live front: **OP-17** (can the state/law split be made canonical?) and
-**OP-14** (now bracketed by P-5/P-8: in the hyperbolic regime the gate is
-open a.e. iff no equilibrium is a sink; the residue is non-hyperbolic
-equilibria plus classification of the forced non-trivial set).
+**OP-14** (now bracketed by P-5/P-9: a linear escape direction at each finite
+equilibrium opens the gate a.e.; the residue is the thin d_u = 0 nonlinear
+instability case, non-isolated equilibrium continua, and classification of
+the forced non-trivial set).
 **OP-18** is resolved modulo maintainer promotion: P-2 proves local
 well-posedness, and P-4 proves K-invariance plus global existence under
 two-layer balance estimates. Novelty scoping remains gated by OP-16.

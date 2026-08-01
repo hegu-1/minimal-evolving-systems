@@ -101,3 +101,8 @@ picking any x ∈ S gives ω(x) ⊆ A with ω(x) ⊄ E, so A ⊋ E. ∎
   hard and arguably unbounded n ≥ 3 problem, outside OP-14's minimal-conditions
   remit. With P-5 (necessary: non-gradient) and P-8 (sufficient: (U)) the gate
   itself is bracketed tightly; only (a) and (b) remain.
+- **R5 (partly superseded by P-9, 2026-08-01).** P-9 handles the
+  non-hyperbolic subcase with at least one eigenvalue Re > 0 by replacing the
+  stable manifold with the centre-stable manifold. After P-9, the remaining
+  non-hyperbolic residue is the thinner d_u = 0 nonlinear-instability case,
+  plus non-isolated equilibrium continua.

@@ -1,8 +1,9 @@
 # P-6 · In two dimensions, all-repelling equilibria open the gate
 
 STATUS: PROPOSITION — complete proof below. Writer, 2026-07-29. Settles the
-reframed OP-14 gate for n = 2 under an explicit minimal condition; isolates
-n ≥ 3 as the open core.
+reframed OP-14 gate for n = 2 under an explicit sufficient condition; P-7
+later shows the same source hypothesis opens the gate in every finite
+dimension.
 
 ## Setting
 
