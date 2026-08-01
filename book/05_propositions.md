@@ -113,3 +113,17 @@ Full statement and proof: `proofs/p008_unstable_gate_almost_everywhere.md`.
 unstable" already opens the gate — the source hypothesis was unnecessary. The
 engine is the null stable manifold ("gradient descent avoids saddles a.e." in
 absorbing-region form). Classical; no novelty claimed (OP-16).
+
+## P-9 · A linear escape direction opens the gate almost everywhere
+
+Drops P-8's hyperbolicity: if each of finitely many equilibria has at least one
+eigenvalue with Re > 0 (a linear escape direction; centre directions allowed),
+the centre-stable manifold has dimension n − d_u < n, so ⋃(W^s(p) ∩ C) is
+Lebesgue-null and the gate opens for a.e. initial condition, every dimension.
+Uses the forward-map nullity technique (no global backward completeness).
+
+Full statement and proof: `proofs/p009_linear_instability_gate.md`. **Narrows
+OP-14 residue (a) to its sharp core:** the gate can only close on a
+positive-measure set at an equilibrium with **d_u = 0** (linearly neutral,
+nonlinearly unstable — non-generic), or at non-isolated equilibrium continua.
+Classical (centre-manifold theorem); no novelty claimed (OP-16).
