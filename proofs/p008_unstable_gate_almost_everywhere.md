@@ -15,7 +15,7 @@ the gate is *open* on C iff some x ∈ C has ω(x) ⊄ E.
 For a hyperbolic equilibrium p, W^s(p) := {x : Φ_t(x) → p} is its global stable
 manifold; by the stable-manifold theorem the local stable manifold W^s_loc(p)
 is an embedded C¹ disk of dimension d_s(p) = #{eigenvalues of DF(p) with
-Re < 0}, and W^s(p) = ⋃_{m∈ℕ} Φ_{−m}(W^s_loc(p)).
+Re < 0}. We use only the part of W^s(p) whose forward orbit remains in C.
 
 ## Hypothesis
 
@@ -39,14 +39,22 @@ Under (U):
 
 **(1) Stable manifolds are null.** Fix p ∈ E. By (U), d_s(p) < n, so W^s_loc(p)
 is an embedded C¹ submanifold of dimension < n, hence Lebesgue-null in ℝⁿ (a
-C¹ image of an open subset of ℝ^{d_s}, d_s < n, is null). Each Φ_{−m} is a
-diffeomorphism of ℝⁿ, so Φ_{−m}(W^s_loc(p)) is again an embedded C¹
-submanifold of dimension d_s(p) < n, hence null. Therefore
+C¹ image of an open subset of ℝ^{d_s}, d_s < n, is null).
 
-  W^s(p) = ⋃_{m∈ℕ} Φ_{−m}(W^s_loc(p))
+For m ∈ ℕ, let D_m be the open set of points whose solution exists on [0, m].
+The time-m map Φ_m : D_m → ℝⁿ is a local C¹ diffeomorphism: its derivative is
+the fundamental matrix of the variational equation and is invertible. Hence
 
-is a countable union of null sets, hence null; and ⋃_{p∈E} W^s(p) is a finite
-union of null sets, hence null.
+  S_m(p) := {x ∈ D_m : Φ_m(x) ∈ W^s_loc(p)}
+
+is an embedded C¹ submanifold of dimension d_s(p) < n, hence null. If x ∈ W^s(p)
+and the forward orbit of x remains in C, then Φ_t(x) → p, so Φ_m(x) ∈
+W^s_loc(p) for all sufficiently large integers m. Therefore
+
+  W^s(p) ∩ C ⊆ ⋃_{m∈ℕ} S_m(p).
+
+Thus W^s(p) ∩ C is null, and ⋃_{p∈E} (W^s(p) ∩ C) is a finite union of null
+sets, hence null in C.
 
 **(2) A full-measure set has non-trivial ω-limit.** Let
 S := C ∖ ⋃_p W^s(p); by (1) and Leb(C) > 0, S has full measure in C (in

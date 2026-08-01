@@ -14,7 +14,7 @@ mathematical structure that any description of an evolving system must already
 contain. Every concept must survive the four tests in `AI_PROTOCOL.md` or it
 does not enter the theory.
 
-## Current state (2026-07-29, v2)
+## Current state (2026-08-01, v2)
 
 Candidate structure: **𝓜 = (X, K, U)** — Difference Space, Admissibility
 Kernel, Law Update — a **two-layer system**: the current law F ∈ K
@@ -27,7 +27,9 @@ the suspension objection (OP-17). C-001 restated in falsifiable-leaning form
 (v2, `proofs/conjectures.md`).
 
 Live front: **OP-17** (can the state/law split be made canonical?) and
-**OP-14** (now pruned by P-3/P-5/P-6 to the n ≥ 3, non-gradient core).
+**OP-14** (now bracketed by P-5/P-8: in the hyperbolic regime the gate is
+open a.e. iff no equilibrium is a sink; the residue is non-hyperbolic
+equilibria plus classification of the forced non-trivial set).
 **OP-18** is resolved modulo maintainer promotion: P-2 proves local
 well-posedness, and P-4 proves K-invariance plus global existence under
 two-layer balance estimates. Novelty scoping remains gated by OP-16.
