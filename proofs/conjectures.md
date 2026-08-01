@@ -136,6 +136,60 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     (c) REFUTED. The candidate is closed as a novelty source; see
     `mappings/transformer.md`.
 
+### C-003 · The slow-drift transfer (the U-layer candidate)
+
+- **Motivation.** C-002 tested only the *state layer* (classical). This
+  conjecture tests the layer that is v2's actual novelty candidate: the
+  law-update U (OP-9). If any OP-16 delta exists, the strongest prior is here.
+- **Setting.** A two-layer 𝓜 with a *slow* law: dδ/dt = F_φ(δ) (fast; δ relaxes
+  to the attractor A(φ) of the frozen law φ), ε dφ/dt = U(φ) (slow), and U the
+  gradient of a fast-attractor functional, U(φ) = ∇_φ Ψ(φ), Ψ(φ) a scalar read
+  off A(φ).
+- **Statement:**
+  - **(a) [classical — Fenichel / averaging].** To leading order in ε the slow
+    layer is a gradient flow on law-space, dφ/dt = ∇_φ Ψ(φ), with the fast layer
+    slaved to A(φ).
+  - **(b) [structural transfer].** The **canonical equation of adaptive
+    dynamics** (φ = trait, fast layer = ecology, Ψ = invasion fitness;
+    Dieckmann–Law) and the **meta-learning outer loop** (φ = meta-parameter,
+    fast layer = inner-loop task, Ψ = meta-objective at the inner solution) are
+    both this slow gradient flow.
+  - **(c) [delta candidate — falsifiable].** The adaptive-dynamics
+    *classification of singular points* transfers. At a singular φ* the sign of
+    the fast-functional Hessian in the "mutant" direction decides the fate:
+    convergence-stable **and** a fitness maximum ⇒ ESS (the slow layer stays
+    put); convergence-stable **but** a fitness *minimum* ⇒ **branching** — the
+    slow layer spontaneously splits into coexisting specialized values. C-003(c)
+    claims *any* two-layer 𝓜 in this class inherits the same dichotomy — in
+    particular **meta-learning specializes into coexisting sub-solutions at a
+    convergence-stable-non-ESS meta-optimum**, governed by the same Hessian sign.
+- **Falsification target:** a meta-learning (or other U-layer) system at a
+  branching-classified φ* that does **not** split, or a split that violates the
+  Hessian sign; equivalently, a domain where the singular-point classification
+  fails to control the slow layer's fate.
+- **Status:** OPEN (proposed 2026-08-01, Writer). (a) classical; (b) a reframing
+  of two known derivations; **(c) is the delta candidate and is UNTESTED** — the
+  novelty-deciding step is a meta-learning experiment plus a literature check.
+- **Attack log:**
+  - 2026-08-01 — Claude (Writer) — *Structural check + honest prior.* The
+    adaptive-dynamics side is textbook: for the Doebeli–Dieckmann model
+    (Gaussian resource σ_k, competition σ_a) the mutant-direction fitness
+    Hessian at x*=0 is s'' = 1/σ_a² − 1/σ_k², so branching ⟺ σ_a < σ_k — a
+    clean, domain-agnostic second-order condition, which is the transferable
+    object. (An individual-based simulation was attempted but was
+    under-resolved in the ESS case and is **not** used as evidence; the
+    analytic condition suffices for the adaptive-dynamics side.) *Honest prior
+    on novelty:* the evolution↔learning correspondence is heavily studied
+    (Baldwin effect; evolutionary game theory ↔ RL; mixture-of-experts /
+    multi-task specialization). C-003(c) may therefore be a *known* reframing,
+    as C-002(b) was. It is worth stating precisely and testing because it is the
+    one candidate that uses the U-layer and makes a *non-obvious, checkable*
+    prediction (meta-learning branching), but the burden is on (c) surviving a
+    meta-learning experiment and a literature delta. Until then C-003 is
+    DISCUSSION-grade, not evidence, and the two-refuted/likely-known pattern
+    (with C-002) is itself evidence that the honest project frame may be (A)
+    reformulation, not a novelty theorem.
+
 ## Template
 
 ### C-000 · <short name>
