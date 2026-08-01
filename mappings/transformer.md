@@ -46,19 +46,25 @@ softmax attention, N=24, d=8) gives:
   pushes the transverse multiplier past 1 and stops collapse (V grows). So the
   anti-collapse device acts exactly by *destabilizing the collapsed
   equilibrium* — P-9's mechanism, as C-002(b) predicts.
-- **(c) quantitative — FAILS.** Under step noise ε, the stationary
-  non-consensus energy is **V_stat ∝ ε** (log–log slope 1.006; V/ε ≈ 43,
-  constant) — the **linear / Ornstein–Uhlenbeck** law, *not* Arrhenius. The
-  RL barrier-plateau instance (prior work) obeys **exp(barrier/ε)**. The two
-  domains obey **different** escape laws.
+- **(c) quantitative — trivially linear (see correction).** Under step noise ε,
+  the stationary non-consensus energy is **V_stat ∝ ε** (slope 1.006;
+  V/ε ≈ 43) — the **linear / Ornstein–Uhlenbeck** law. This is the response of a
+  *linearly-stable* fixed point to noise; near it the dynamics are governed by
+  the Jacobian, so any clause-(b) instance obeys the *same* linear law by
+  construction.
 
-**Reading.** C-002's *structural* unification survives; its *quantitative*
-common-law clause is refuted for this pair. "Collapse" is therefore **not one
-universality class**: it splits into linear / spectral-gap (oversmoothing — you
-fall into a stable fixed point, escape by local instability, OU under noise) and
-nonlinear / Arrhenius (a plateau separated by a barrier, escape by large
-deviations). The distinguishing invariant is whether the collapsed state is a
-linearly-stable fixed point or a barrier-separated well — elementary once named.
+**Reading (corrected 2026-08-01 — retraction, see `proofs/conjectures.md`).**
+An earlier version compared V_stat ∝ ε here to the RL double-well's Arrhenius
+escape and declared C-002(c) "refuted, different laws." That was a **category
+error**: oversmoothing escapes by *destabilizing* a stable fixed point (the
+clause-(b) mechanism — local, linear), while the RL double-well escapes by
+*noise-driven barrier crossing* (a different mechanism, not a valid (b)
+instance). So the "mismatch" is spurious. Corrected reading: within (b)'s scope
+everything is linear, so (c) holds **trivially** (the shared law is the leading
+Jacobian eigenvalue) and carries **no delta** — C-002 yields no novelty because
+(b) is inherently a local/linear mechanism, not because two laws clashed. The
+genuinely non-trivial phenomenon — barrier escape (Arrhenius / large deviations)
+— is a *separate* transfer question (→ C-004), which C-002 does not settle.
 
 ## What this mapping does NOT establish
 

@@ -119,22 +119,37 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     (the discipline used on the earlier RL escape-time / Arrhenius study, which
     is prior cross-domain evidence for a shared escape law). Until (c) survives
     that check in ≥ 2 domains, C-002 is DISCUSSION-grade, not evidence.
-  - 2026-08-01 — Claude (Writer) — *(c) REFUTED for the transformer/RL pair
-    (experiment).* `MES_transformer_collapse_test.py`, real softmax attention.
-    (b) confirmed: destabilizing the transverse (consensus-orthogonal) mode
-    stops oversmoothing. (c) refuted: under step noise ε the transformer's
-    stationary non-consensus energy is V_stat ∝ ε (log–log slope 1.006,
-    V/ε ≈ 43 constant) — the linear / Ornstein–Uhlenbeck law — whereas the RL
-    barrier-plateau escape obeys exp(barrier/ε) (Arrhenius). The two escape laws
-    differ, so **there is no common quantitative law (c)**. "Collapse" splits
-    into ≥ 2 universality classes (linear spectral-gap vs nonlinear Arrhenius),
-    distinguished by whether the collapsed state is a linearly-stable fixed
-    point or a barrier-separated well. Consequence: C-002's *structural* clause
-    (b) holds but is a reframing of known per-domain facts; the *quantitative*
-    delta the conjecture was built to test does not exist. **No OP-16 novelty in
-    this transfer.** Status downgraded: (a) classical, (b) DISCUSSION reframing,
-    (c) REFUTED. The candidate is closed as a novelty source; see
-    `mappings/transformer.md`.
+  - 2026-08-01 — Claude (Writer) — *(c) test attempt.*
+    `MES_transformer_collapse_test.py`, real softmax attention. (b) confirmed:
+    destabilizing the transverse (consensus-orthogonal) mode stops oversmoothing;
+    under step noise ε the stationary non-consensus energy is V_stat ∝ ε
+    (slope 1.006) — the linear / Ornstein–Uhlenbeck law. The write-up then
+    compared this to the earlier RL barrier-plateau's Arrhenius escape and
+    (wrongly) declared (c) "REFUTED, laws differ" — see the retraction below.
+  - 2026-08-01 — Claude (Writer) — **RETRACTION of the "refuted" verdict
+    (category error, caught by the maintainer's "where doesn't it line up?").**
+    The comparison mixed two *different escape mechanisms*: transformer
+    oversmoothing escapes by **destabilizing** a linearly-stable fixed point
+    (the P-9 / clause-(b) mechanism — inherently *local and linear*, rate = the
+    leading Jacobian eigenvalue), whereas the RL double-well escapes by
+    **noise-driven barrier crossing** (dynamics unchanged; Arrhenius). The RL
+    barrier case is therefore **not a valid instance of C-002(b)** at all, so the
+    OU-vs-Arrhenius "mismatch" says nothing about (c). Corrected reading: within
+    (b)'s actual scope (fixed-point destabilization) *everything is linear*, so
+    (c) holds **trivially** (the common law is the leading eigenvalue) and there
+    is **no non-trivial delta** — but this is a triviality, not a refutation by
+    mismatch. Status: (a) classical; (b) DISCUSSION reframing; (c) *trivially
+    true within (b), no delta*. **The candidate yields no novelty because (b) is
+    inherently a linear/local mechanism**, not because two laws failed to match.
+  - 2026-08-01 — Claude (Writer) — *Consequence: a better, un-conflated
+    candidate is exposed (→ C-004 to be stated).* The non-trivial phenomenon —
+    **noise-driven barrier escape**, obeying the Arrhenius / Freidlin–Wentzell
+    large-deviation form — is a *different* transfer that C-002 folded away.
+    Whether that exponential law is a genuine cross-domain universality (RL
+    barrier plateaus [prior NEPM Arrhenius evidence], loss-landscape barriers in
+    training, laminar→turbulent transition) with an *independently predictable*
+    barrier is the real open delta question, and it is non-trivial (large
+    deviations, not a local eigenvalue). C-002 does not settle it either way.
 
 ### C-003 · The slow-drift transfer (the U-layer candidate)
 
