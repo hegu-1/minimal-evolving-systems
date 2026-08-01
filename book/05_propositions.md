@@ -127,3 +127,45 @@ OP-14 residue (a) to its sharp core:** the gate can only close on a
 positive-measure set at an equilibrium with **d_u = 0** (linearly neutral,
 nonlinearly unstable — non-generic), or at non-isolated equilibrium continua.
 Classical (centre-manifold theorem); no novelty claimed (OP-16).
+
+## P-10 · A law layer that reads only its own attractor cannot diversify
+
+Law layer (the U side, first proposition there). If the slow layer is driven by
+a scalar Ψ of a *single* argument — a functional read off the frozen-law
+attractor, so a variant law's fitness is Ψ(φ′) whatever the resident — then
+convergence stability and uninvadability are the *same* condition
+(Hess Ψ(φ\*) ≺ 0) on the same function at the same point. The branching class
+"convergence-stable and invadable" is therefore empty, for every Ψ and every
+dimension: **no such 𝓜 diversifies.** The obstruction is not gradient-ness (in
+1-D every drift is some potential's gradient, yet adaptive dynamics branches in
+1-D) but the identification of the drift potential with the fitness functional,
+which kills the frequency-dependence term ∂₁∂₂s that branching requires.
+
+Full statement and proof: `proofs/p010_no_branching_under_autonomous_u.md`.
+**Refutes C-003 as originally stated** — (a) and (c) were inconsistent — and
+forces C-003 (v2): U must be built from a two-argument functional Ψ(φ, φ′),
+i.e. the law layer must evaluate counterfactual laws. That is OP-9's
+self-modification question in checkable form. The adaptive-dynamics second-order
+conditions used are textbook; the OP-16 delta candidate, unsettled, is the
+*negative consequence* for fixed-outer-objective learning systems (C-003 v2 c₁).
+
+## P-11 · A frequency-dependent learning layer splits, with a closed-form threshold
+
+Companion instance to P-10, built from machine-learning primitives only:
+Gaussian tokens of variance σ², two constant-predicting experts, softmax routing
+at temperature τ, gradient flow on the routed loss. On the split coordinate
+v = (φ₁ − φ₂)/2 the loss expands as
+σ² + (1 − 2σ²/τ)v² + (2σ⁴/τ³)v⁴ + O(v⁶), so the unspecialised configuration is a
+strict local minimum iff **τ > 2σ²** and loses stability in the split direction
+iff τ < 2σ², through a **supercritical pitchfork**. With position-independent
+routing — resident-independent fitness, the P-10 hypothesis — the loss is
+σ² + u² + v² and no split occurs at any τ.
+
+Full statement, proof and numerical confirmation:
+`proofs/p011_routed_moe_split_threshold.md`. It establishes the *necessity*
+direction and exhibits a frequency-dependent split with a derived (not fitted)
+threshold; it explicitly does **not** verify the adaptive-dynamics
+singular-point classification, since the Hessian computed is that of a joint
+objective and the system has no rarity parameter. No novelty claimed for the
+pitchfork itself (OP-16): the temperature/specialisation trade-off is folklore
+in the mixture-of-experts literature.

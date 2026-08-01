@@ -35,6 +35,16 @@ the forced non-trivial set).
 well-posedness, and P-4 proves K-invariance plus global existence under
 two-layer balance estimates. Novelty scoping remains gated by OP-16.
 
+The **law layer** now has propositions of its own: **P-10** shows a U built from
+a one-argument functional — a fitness reading only its own attractor — can never
+diversify, since convergence stability and uninvadability collapse onto the same
+condition. That refutes C-003 as first stated and forces C-003 (v2), in which U
+must evaluate counterfactual laws; **P-11** exhibits a frequency-dependent
+instance from machine-learning primitives with a derived split threshold. The
+open OP-16 delta candidate is now a *negative* statement — that a fixed outer
+objective forbids diversification — and **OP-19** asks whether P-5 and P-10 are
+one obstruction seen at two layers.
+
 See `book/03_axioms.md` and `book/08_open_problems.md`.
 
 ## How to read this repository

@@ -204,6 +204,96 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     DISCUSSION-grade, not evidence, and the two-refuted/likely-known pattern
     (with C-002) is itself evidence that the honest project frame may be (A)
     reformulation, not a novelty theorem.
+  - 2026-08-01 — Claude (Writer) — **Internal-inconsistency attack: (a) and (c)
+    cannot both hold. Proved as P-10.** Clause (a) makes Ψ a function of *one*
+    argument — a scalar read off the frozen-law attractor — so the fitness of a
+    variant law φ′ is Ψ(φ′) whatever the resident. Then convergence stability
+    and uninvadability are both the condition Hess Ψ(φ\*) ≺ 0 on the *same*
+    function at the *same* point, so they coincide and the branching class
+    "convergence-stable **and** invadable" is empty — for every Ψ, in every
+    dimension. C-003(c) therefore has **no instances inside C-003(a)**.
+    The obstruction is *not* gradient-ness (in 1-D every drift is some
+    potential's gradient, yet adaptive dynamics branches in 1-D); it is the
+    identification of the drift potential with the fitness functional, which
+    forces the frequency-dependence term ∂₁∂₂s to vanish — and branching
+    requires ∂₁∂₂s < −∂₂²s < 0. See `proofs/p010_no_branching_under_autonomous_u.md`.
+  - 2026-08-01 — Claude (Writer) — *Restatement (v2 below), plus the literature
+    delta the previous entry called for.* The repair is forced by P-10 R2: U
+    must be built from a **two-argument** functional, U(φ) = ∇_{φ′}Ψ(φ, φ′)|_{φ′=φ},
+    i.e. the law layer must evaluate counterfactual laws against the resident's
+    fast attractor rather than reading only its own. Literature check run
+    2026-08-01 (arXiv API over cs.LG/cs.AI/cs.NE/cs.MA/stat.ML plus web):
+    **must be conceded as known** — (1) the two-timescale/slaved formulation of
+    bilevel and meta-learning (Borkar 1997; Heusel et al. 2017 arXiv:1706.08500;
+    Hong et al. arXiv:2007.05170); (2) its mean-field population version with an
+    *effective fitness* obtained by equilibrating the fast layer (Borghi–Im–
+    Pareschi 2026, arXiv:2603.19808); (3) the *move* of exporting the
+    adaptive-dynamics ESS/branching classification out of biology — done for
+    technology and markets in Dercole–Dieckmann–Obersteiner–Rinaldi 2008,
+    *Technovation* 28(6):335–348, so "AD transfers outside biology" is **not**
+    claimable; (4) the fixed-objective vs interaction-derived-fitness
+    distinction inside learning systems, verbally in coevolutionary computation
+    (Ficici 2004; Popovici et al. 2012) and formally as the potential/Hamiltonian
+    game decomposition (Balduzzi et al. 2018, arXiv:1905.04926); (5) competition
+    ⇒ niche differentiation as an empirical phenomenon (Leibo et al. 2019
+    arXiv:1812.07019). **Not found** (zero arXiv hits for `abs:"invasion fitness"`
+    or `abs:"adaptive dynamics" AND abs:"branching"` in any CS/ML category): the
+    adaptive-dynamics machinery applied to an ML bilevel system; a branching
+    prediction for an ML slow variable; and — the sharpest gap — the **negative**
+    result that a fixed outer objective forbids diversification outright. Known
+    search limits: abstract-only arXiv queries; Semantic Scholar rate-limited, so
+    the decisive check (CS-category citers of Geritz–Kisdi–Meszéna–Metz 1998) was
+    **not** run; GECCO/ALIFE/ECJ/IEEE-TEVC underrepresented, which is where a
+    hidden precedent is most likely to sit. Novelty is therefore *not settled*.
+
+### C-003 (v2) · The two-argument U, and what a fixed objective forbids
+
+- **Statement (2026-08-01, forced by P-10):**
+  - **(a) [classical — concede].** Under timescale separation the slow layer is,
+    to leading order, driven by a fitness obtained by equilibrating the fast
+    layer. Published; see the attack-log entry above for the chain.
+  - **(b) [structural requirement, proved].** Diversification requires the law
+    layer to be built from a two-argument functional Ψ(φ, φ′) — the resident's
+    fast attractor evaluated against a variant law. A law layer that reads only
+    its own attractor is confined to ESS-or-repellor singular points. **Proved:
+    P-10.**
+  - **(c₁) [delta candidate — PROVED, negative].** Consequently any ML slow
+    layer driven by a **fixed outer objective** — standard meta-learning,
+    hyperparameter optimisation, and in particular the mean-field effective
+    fitness F̄(h) of Borghi–Im–Pareschi (a function of h alone, independent of
+    the population density) — **provably cannot branch**. Multimodality there is
+    multiple optima of a fixed landscape, not adaptive-dynamics branching. This
+    is a prediction with a sharp failure mode: exhibit a fixed-outer-objective
+    system that spontaneously and stably splits, and (c₁) dies.
+  - **(c₂) [delta candidate — OPEN].** Frequency-dependent ML slow layers —
+    self-play, GANs, multi-agent learning, load-balanced mixture-of-experts —
+    inherit the full singular-point classification, with convergence stability
+    and invadability governed by the two *distinct* second derivatives
+    (∂₁∂₂ + ∂₂²)Ψ and ∂₂²Ψ. **Untested.**
+- **Falsification targets:** for (c₁), a stable spontaneous split under a
+  resident-independent objective; for (c₂), an ML system classified as branching
+  that does not split, or a split violating the sign condition.
+- **Status:** OPEN. (a) conceded classical; (b) proved (P-10); (c₁) proved as a
+  consequence of P-10 but its *novelty* is unsettled pending the search gaps
+  listed above; (c₂) untested. A frequency-dependent instance with a closed-form
+  threshold, built from ML primitives only, is P-11 — it confirms the necessity
+  direction and exhibits the split, but explicitly does **not** verify the
+  singular-point classification, so (c₂) remains open.
+- **Attack log:**
+  - 2026-08-01 — Claude (Writer) — *Anticipated referee objection: "this is the
+    natural next remark in Borghi–Im–Pareschi."* Their Remark 11 already
+    gestures at "potentially non-unique, multimodal steady states" as future
+    work. Counter: their effective fitness is population-independent, so by
+    P-10 their framework cannot produce branching at all — the remark cannot be
+    about branching. This converts the most threatening prior work into the
+    clearest motivating instance, but it also means (c₁)'s value depends
+    entirely on the negative statement being genuinely absent, which the
+    incomplete search above has not established.
+  - 2026-08-01 — Claude (Writer) — *Scope attack on (c₂).* P-11's system has a
+    fixed number of coexisting types and no rarity parameter, so the
+    monomorphic-resident / rare-mutant construction does not literally apply to
+    it. Any instance offered for (c₂) must supply a genuine invasion fitness,
+    not a joint objective, or it will repeat P-11's limitation.
 
 ## Template
 
