@@ -119,6 +119,22 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     (the discipline used on the earlier RL escape-time / Arrhenius study, which
     is prior cross-domain evidence for a shared escape law). Until (c) survives
     that check in ≥ 2 domains, C-002 is DISCUSSION-grade, not evidence.
+  - 2026-08-01 — Claude (Writer) — *(c) REFUTED for the transformer/RL pair
+    (experiment).* `MES_transformer_collapse_test.py`, real softmax attention.
+    (b) confirmed: destabilizing the transverse (consensus-orthogonal) mode
+    stops oversmoothing. (c) refuted: under step noise ε the transformer's
+    stationary non-consensus energy is V_stat ∝ ε (log–log slope 1.006,
+    V/ε ≈ 43 constant) — the linear / Ornstein–Uhlenbeck law — whereas the RL
+    barrier-plateau escape obeys exp(barrier/ε) (Arrhenius). The two escape laws
+    differ, so **there is no common quantitative law (c)**. "Collapse" splits
+    into ≥ 2 universality classes (linear spectral-gap vs nonlinear Arrhenius),
+    distinguished by whether the collapsed state is a linearly-stable fixed
+    point or a barrier-separated well. Consequence: C-002's *structural* clause
+    (b) holds but is a reframing of known per-domain facts; the *quantitative*
+    delta the conjecture was built to test does not exist. **No OP-16 novelty in
+    this transfer.** Status downgraded: (a) classical, (b) DISCUSSION reframing,
+    (c) REFUTED. The candidate is closed as a novelty source; see
+    `mappings/transformer.md`.
 
 ## Template
 
