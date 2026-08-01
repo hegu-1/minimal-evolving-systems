@@ -1,8 +1,9 @@
 # P-6 · In two dimensions, all-repelling equilibria open the gate
 
 STATUS: PROPOSITION — complete proof below. Writer, 2026-07-29. Settles the
-reframed OP-14 gate for n = 2 under an explicit minimal condition; isolates
-n ≥ 3 as the open core.
+reframed OP-14 gate for n = 2 under an explicit sufficient condition; P-7
+later shows the same source hypothesis opens the gate in every finite
+dimension.
 
 ## Setting
 
@@ -78,6 +79,11 @@ orbit contained in C, and Γ ⊄ E. ∎
   source (R) — is a non-trivial invariant set forced to attract? Poincaré–
   Bendixson gives no leverage; a topological argument (degree / Conley index)
   would be needed. Open.
+  *(Framing correction, 2026-08-01: P-7 shows the gate **opens** under (R) in
+  every dimension by a short ω-limit-connectedness argument — no Conley index
+  needed. What is hard in n ≥ 3 is not opening the gate but **classifying** the
+  forced non-trivial set, and the saddle/unstable gap. See
+  `proofs/p007_all_source_gate_every_dimension.md`.)*
 - **R3 (sufficient, not necessary).** (R) is not necessary for the gate to
   open even in n = 2: a trapping region with saddle equilibria can carry a
   periodic orbit or a heteroclinic graphic. P-6 gives one clean minimal

@@ -93,5 +93,6 @@ d/dt L(Φ_t(q)) at t = 0 is one-sided where needed and equals ⟨∇L(q), F(q)�
   Recorded to prune the OP-14 search space; **no novelty claimed (OP-16)**.
 - **R4 (necessary, not sufficient).** (G)'s failure does not *produce* a
   non-trivial attractor; P-5 forbids the gate in the gradient regime but does
-  not open it off that regime. Sufficiency is dimension-dependent: settled for
-  n = 2 in P-6, open for n ≥ 3.
+  not open it off that regime. P-7/P-8/P-9 give sufficient hypotheses by
+  progressively deleting assumptions: sources, then hyperbolic unstable
+  equilibria, then any finite equilibrium set with a linear escape direction.
