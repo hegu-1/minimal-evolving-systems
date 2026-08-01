@@ -66,6 +66,60 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     minimal state). Outcome: the statement needs clause (iii) before the
     ROADMAP mapping proofs can count as evidence.
 
+### C-002 · Collapse–instability transfer
+
+- **Motivation.** The OP-14 chain P-5…P-9 is classical *per domain*; its
+  candidate contribution is a *transfer* (OP-16 locus iii): one abstract
+  statement whose instantiation gives a non-obvious, checkable parallel across
+  unrelated domains. This conjecture states that candidate precisely so it can
+  be attacked.
+- **Setting.** Let 𝒟 be the class of dissipative iterative systems on ℝⁿ — a
+  flow (or the Euler flow of a map) with a bounded absorbing region C (P-1) and
+  finitely many equilibria in C. Call convergence of a trajectory to an
+  equilibrium **collapse**.
+- **Statement (three clauses, (b)/(c) falsifiable):**
+  - **(a) [proved: P-9 instantiated]** In any member of 𝒟, a.e. trajectory
+    avoids collapse **if** every equilibrium in C has a *linear escape direction*
+    (an eigenvalue of DF with Re > 0). (One-way, per P-9; the converse fails on
+    the d_u = 0 residue — cf. the ẋ = x² example — so this is not an iff.)
+  - **(b) [structural transfer]** The following are the same phenomenon —
+    collapse in 𝒟 — under a common cure: *representation collapse / oversmoothing*
+    in deep residual-network depth dynamics; *plateau/mode collapse* in policy
+    optimization; *laminar collapse* in forced-dissipative fluid flow. In each,
+    the empirical anti-collapse device — skip connections / normalization;
+    exploration / entropy regularization; sustained forcing — acts by giving the
+    collapsed equilibrium a linear escape direction (introducing an eigenvalue
+    with Re > 0).
+  - **(c) [quantitative transfer]** Near the collapsed equilibrium in the
+    low-noise / weak-coupling regime, the escape (non-collapse) rate is governed
+    by the leading unstable eigenvalue Re λ⁺ of the collapsed equilibrium, with
+    the *same* functional dependence across the three domains.
+- **Falsification targets:** a domain anti-collapse device that provably does
+  **not** add an unstable direction to the collapsed equilibrium; a collapse
+  that occurs while every equilibrium is unstable; or a domain whose escape-rate
+  law is not governed by Re λ⁺.
+- **First checkable instance (transformer, `mappings/transformer.md`):** for a
+  residual attention block δ_{ℓ+1} = δ_ℓ + Attn(δ_ℓ) the collapsed (rank-1)
+  fixed point has Jacobian I + D(Attn); pure attention contracts (rank collapse,
+  cf. Dong–Cordonnier–Loukas 2021, *to be read*), while the residual `+I` shift
+  can push an eigenvalue past the unit circle — a linear escape direction. (b)
+  then predicts: skip connections prevent oversmoothing a.e. **iff** they
+  destabilize the rank-1 fixed point; (c) predicts the un-collapse rate tracks
+  the leading unstable eigenvalue. Both are measurable.
+- **Status:** OPEN (proposed 2026-08-01, Writer). Novelty is *not* claimed for
+  (a); the OP-16 delta, if any, is the transfer (b)+(c) — specifically the
+  common quantitative law (c) — and it is unverified. (a) is classical.
+- **Attack log:**
+  - 2026-08-01 — Claude (Writer) — *Obviousness self-attack.* Each clause-(b)
+    instance is separately known in its own field (oversmoothing↔rank collapse;
+    RL plateaus; laminar–turbulent transition). The conjecture has content only
+    if (c)'s common functional law is real and not merely the shared triviality
+    "linear instability sets the local escape rate." Guard: (c) must be checked
+    with an *independently computed* Re λ⁺ predicting the rate, not fit post hoc
+    (the discipline used on the earlier RL escape-time / Arrhenius study, which
+    is prior cross-domain evidence for a shared escape law). Until (c) survives
+    that check in ≥ 2 domains, C-002 is DISCUSSION-grade, not evidence.
+
 ## Template
 
 ### C-000 · <short name>
