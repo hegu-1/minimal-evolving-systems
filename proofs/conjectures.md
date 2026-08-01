@@ -74,9 +74,10 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
   unrelated domains. This conjecture states that candidate precisely so it can
   be attacked.
 - **Setting.** Let 𝒟 be the class of dissipative iterative systems on ℝⁿ — a
-  flow (or the Euler flow of a map) with a bounded absorbing region C (P-1) and
-  finitely many equilibria in C. Call convergence of a trajectory to an
-  equilibrium **collapse**.
+  flow, or a map viewed either through its Euler/continuous-depth
+  interpolation or through its one-step dynamics, with a bounded absorbing
+  region C (P-1) and finitely many equilibria / fixed points in C. Call
+  convergence of a trajectory / orbit to such a point **collapse**.
 - **Statement (three clauses, (b)/(c) falsifiable):**
   - **(a) [proved: P-9 instantiated]** In any member of 𝒟, a.e. trajectory
     avoids collapse **if** every equilibrium in C has a *linear escape direction*
@@ -88,24 +89,30 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     optimization; *laminar collapse* in forced-dissipative fluid flow. In each,
     the empirical anti-collapse device — skip connections / normalization;
     exploration / entropy regularization; sustained forcing — acts by giving the
-    collapsed equilibrium a linear escape direction (introducing an eigenvalue
-    with Re > 0).
+    collapsed equilibrium a linear escape direction (for flows, introducing an
+    eigenvalue with Re > 0; for maps, a multiplier with modulus > 1).
   - **(c) [quantitative transfer]** Near the collapsed equilibrium in the
     low-noise / weak-coupling regime, the escape (non-collapse) rate is governed
-    by the leading unstable eigenvalue Re λ⁺ of the collapsed equilibrium, with
-    the *same* functional dependence across the three domains.
+    by the leading instability scale of the collapsed point — Re λ⁺ for flows,
+    or log |μ⁺| (equivalently the Euler-normalized generator (μ⁺ − 1)/h when a
+    continuous-depth approximation is fixed) for maps — with the *same*
+    functional dependence across the three domains.
 - **Falsification targets:** a domain anti-collapse device that provably does
   **not** add an unstable direction to the collapsed equilibrium; a collapse
-  that occurs while every equilibrium is unstable; or a domain whose escape-rate
-  law is not governed by Re λ⁺.
+  on a positive-measure / a.e.-typical set while every equilibrium / fixed
+  point has a linear escape direction; or a domain whose escape-rate law is not
+  governed by the leading instability scale.
 - **First checkable instance (transformer, `mappings/transformer.md`):** for a
   residual attention block δ_{ℓ+1} = δ_ℓ + Attn(δ_ℓ) the collapsed (rank-1)
   fixed point has Jacobian I + D(Attn); pure attention contracts (rank collapse,
   cf. Dong–Cordonnier–Loukas 2021, *to be read*), while the residual `+I` shift
   can push an eigenvalue past the unit circle — a linear escape direction. (b)
-  then predicts: skip connections prevent oversmoothing a.e. **iff** they
-  destabilize the rank-1 fixed point; (c) predicts the un-collapse rate tracks
-  the leading unstable eigenvalue. Both are measurable.
+  then gives a sufficient-mechanism prediction: when skip connections prevent
+  oversmoothing by the P-9 mechanism, they do so by destabilizing the rank-1
+  fixed point; whether all skip-based prevention must work this way remains an
+  attack target, not an iff. (c) predicts the un-collapse rate tracks the
+  leading unstable multiplier / Euler-normalized eigenvalue. Both are
+  measurable.
 - **Status:** OPEN (proposed 2026-08-01, Writer). Novelty is *not* claimed for
   (a); the OP-16 delta, if any, is the transfer (b)+(c) — specifically the
   common quantitative law (c) — and it is unverified. (a) is classical.
@@ -119,6 +126,15 @@ conjecture moves to `book/06_theorems.md` with its proof filed in `proofs/`.
     (the discipline used on the earlier RL escape-time / Arrhenius study, which
     is prior cross-domain evidence for a shared escape law). Until (c) survives
     that check in ≥ 2 domains, C-002 is DISCUSSION-grade, not evidence.
+  - 2026-08-01 — Codex (Formalizer) — *Discrete/continuous and iff audit.*
+    The transformer instance is a map, so "Re λ⁺" is not the literal instability
+    rate unless a continuous-depth / Euler normalization is fixed; the
+    conjecture now distinguishes flow eigenvalues from map multipliers. The
+    transformer prediction also cannot be an iff: P-9 supplies a sufficient
+    a.e. non-collapse mechanism, while converse failures can occur through the
+    d_u = 0 residue or other non-P-9 mechanisms. Falsification targets were
+    correspondingly tightened to positive-measure / a.e.-typical collapse, since
+    individual stable-manifold collapse is compatible with P-9.
 
 ## Template
 
