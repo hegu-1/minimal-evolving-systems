@@ -80,9 +80,10 @@ d/dt L(Φ_t(q)) at t = 0 is one-sided where needed and equals ⟨∇L(q), F(q)�
   B = ½‖δ‖² satisfies Ḃ ≤ −2(α−β)B + γ, which is negative only *outside* the
   absorbing ball; **inside** C_c the sign of Ḃ is unconstrained. So B drives
   trajectories *into* C_c but is not a Lyapunov function *within* it. P-5 says
-  precisely: the gate is open on C_c iff **no** C¹ function — B or any other —
-  is a strict Lyapunov function there. The complexity question is thus not
-  "does energy decrease?" but "does *some* observable decrease monotonically?"
+  precisely: if the gate is open on C_c, then **no** C¹ function — B or any
+  other — is a strict Lyapunov function there. The complexity question is thus
+  not "does energy decrease?" but "does *some* observable decrease
+  monotonically?"
 - **R2 (relation to P-3).** P-3 removed *equilibrium absence* as the gate
   mechanism (finite dim). P-5 removes *gradient dynamics* as a place the gate
   could open. Together they confine OP-14 to: finite-dimensional,
