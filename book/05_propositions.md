@@ -84,6 +84,32 @@ disk contains a periodic orbit (Lyapunov-equation collars + Poincaré–Bendixso
 so the reframed OP-14 gate is open.
 
 Full statement and proof: `proofs/p006_two_dimensional_gate.md`. Promotes
-OP-14's own witness (unstable focus + trapping region) to a proposition and
-**isolates n ≥ 3 as the open core** (Poincaré–Bendixson fails; Lorenz-type
-strange attractors become possible). Classical; no novelty claimed (OP-16).
+OP-14's own witness (unstable focus + trapping region) to a proposition. In the
+plane it gives the strong conclusion — a *periodic orbit*. Classical; no novelty
+claimed (OP-16).
+
+## P-7 · All-source equilibria open the gate in every finite dimension
+
+If every equilibrium in a P-1 absorbing region is a source, then every
+non-equilibrium trajectory has a non-trivial ω-limit set (ω(x) ⊄ E), so the
+gate is open **in every finite dimension** — no Poincaré–Bendixson or Conley
+index required, only connectedness of ω-limit sets and the empty stable set of a
+source. The global attractor strictly contains the equilibria.
+
+Full statement and proof: `proofs/p007_all_source_gate_every_dimension.md`.
+**Corrects the P-6/07-29 "n ≥ 3 is the hard core" framing:** opening the gate is
+not dimension-hard. Classical; no novelty claimed (OP-16).
+
+## P-8 · Unstable hyperbolic equilibria open the gate almost everywhere
+
+If every equilibrium in a P-1 absorbing region is hyperbolic and unstable
+(d_s < n each), then ⋃_p W^s(p) is Lebesgue-null, so a full-measure set of
+initial conditions has non-trivial ω-limit (ω(x) ⊄ E): the gate is open for
+almost every initial condition, in every finite dimension. Subsumes P-7 (sources
+= d_s ≡ 0).
+
+Full statement and proof: `proofs/p008_unstable_gate_almost_everywhere.md`.
+**Resolves OP-14 residue (i):** OP-14's own condition "every equilibrium
+unstable" already opens the gate — the source hypothesis was unnecessary. The
+engine is the null stable manifold ("gradient descent avoids saddles a.e." in
+absorbing-region form). Classical; no novelty claimed (OP-16).
